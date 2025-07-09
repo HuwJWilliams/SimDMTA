@@ -13,7 +13,7 @@ FILE_DIR = str(Path(__file__).parent)
 PARENT_DIR = str(Path(__file__).parent.parent)
 
 sys.path.insert(0, PARENT_DIR)
-from dataset_functions import Dataset_Formatter
+from dataset_functions import DatasetFormatter
 
 make_training_data = False
 make_full_data = True
@@ -23,7 +23,7 @@ chunksize = 100000
 # MAKING TRAINING DATA SET
 if make_training_data:
     print("Generating ChEMBL Data set")
-    mk = Dataset_Formatter()
+    mk = DatasetFormatter()
 
     data = mk._load_data(
         mol_dir="/users/yhb18174/Recreating_DMTA/datasets/ChEMBL/training_data/",
@@ -131,7 +131,7 @@ if make_full_data:
 
     # premade_chunks = glob(f'/users/yhb18174/Recreating_DMTA/datasets/temp/temp_*.csv.gz')
 
-    mk = Dataset_Formatter()
+    mk = DatasetFormatter()
 
     # print('Loading full data:\n')
 

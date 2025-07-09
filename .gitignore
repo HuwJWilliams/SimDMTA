@@ -7,3 +7,4 @@ results/
 !scripts/datasets
 scripts/docking/gnina
 *csv.gz
+*.sh

@@ -7,8 +7,9 @@ This simulation enables us to evaluate the downstream effects of various molecul
 As AI becomes increasingly integrated into pharmaceutical research, it is essential to recognise the impact of model retraining on the quality and efficiency of candidate selection. 
 SimDMTA provides a framework for systematically assessing how selection strategies influence predictive performance and a model's hit-finding capabilities.
 
-## Accompanying Paper
-In progress
+## Citation
+If you use this framework in your research, please cite:
+[Manuscript in progress]
 
 ![image](https://github.com/user-attachments/assets/aaa0d982-6aef-4bd9-b85c-f61f54285ee7)
 

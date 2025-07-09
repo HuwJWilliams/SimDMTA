@@ -1,5 +1,7 @@
 # SimDMTA Workflow: Simulation Framefork for Iterative Docking-Based Molecular Selection Assessment
 
+![image](https://github.com/user-attachments/assets/aaa0d982-6aef-4bd9-b85c-f61f54285ee7)
+
 ## Project Overview
 
 The SimDMTA project aims to accelerate the early stages of drug discovery by *simulating* the pharmaceutical Design–Make–Test–Analyse (*DMTA*) cycle. 
@@ -10,9 +12,6 @@ SimDMTA provides a framework for systematically assessing how selection strategi
 ## Citation
 If you use this framework in your research, please cite:
 [Manuscript in progress]
-
-![image](https://github.com/user-attachments/assets/aaa0d982-6aef-4bd9-b85c-f61f54285ee7)
-
 
 ## Molecule Selection/ Query Strategies
 
@@ -97,6 +96,10 @@ project/
         ├── average_fns.py                    
         └── run_average.py
 ```
+
+## 📫 Contact
+For questions, feedback, or collaboration ideas, feel free to reach out to:
+- Huw Williams (huwjwilliams@btinternet.com)
 
 ## References
 GNINA: 

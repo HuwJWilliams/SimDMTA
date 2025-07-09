@@ -1,0 +1,173 @@
+2025-07-02 13:17:24,711 | INFO | Initialised logger: RFModel.log
+2025-07-02 13:17:24,711 | INFO | Training random forest regressor model...
+2025-07-02 13:26:57,930 | INFO | Plotting feature importance
+2025-07-02 14:01:48,734 | INFO | Initialised logger: RFModel.log
+2025-07-02 14:01:48,753 | INFO | Training random forest regressor model...
+2025-07-02 14:11:20,453 | INFO | Plotting feature importance
+2025-07-02 14:11:23,110 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-02 14:23:20,836 | INFO | Initialised logger: RFModel.log
+2025-07-02 14:23:20,838 | INFO | Training random forest regressor model...
+2025-07-02 14:32:47,484 | INFO | Plotting feature importance
+2025-07-02 14:32:50,114 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-02 14:32:50,515 | INFO | Retraining complete and predictions made.
+2025-07-02 14:32:50,515 | INFO | Performance on total training data:
+{'Bias': -0.0046, 'SDEP': 0.4505, 'MSE': 0.2095, 'RMSE': 0.4574, 'r2': 0.7199, 'pearson_r': 0.8622, 'pearson_p': 0.0}
+2025-07-02 14:32:50,515 | INFO | Performance on ChEMBL training data:
+{'Bias': -0.0046, 'SDEP': 0.4505, 'MSE': 0.2095, 'RMSE': 0.4574, 'r2': 0.7199, 'pearson_r': 0.8622, 'pearson_p': 0.0}
+2025-07-02 14:33:45,906 | INFO | Initialised logger: RFModel.log
+2025-07-02 14:33:45,906 | INFO | Training random forest regressor model...
+2025-07-02 14:43:19,126 | INFO | Plotting feature importance
+2025-07-02 14:43:21,695 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-02 14:43:22,053 | INFO | Retraining complete and predictions made.
+2025-07-02 14:43:22,053 | INFO | Performance on total training data:
+{'Bias': -0.0127, 'SDEP': 0.4575, 'MSE': 0.2095, 'RMSE': 0.4577, 'r2': 0.7256, 'pearson_r': 0.8665, 'pearson_p': 0.0}
+2025-07-02 14:43:22,053 | INFO | Performance on ChEMBL training data:
+{'Bias': -0.0127, 'SDEP': 0.4575, 'MSE': 0.2095, 'RMSE': 0.4577, 'r2': 0.7256, 'pearson_r': 0.8665, 'pearson_p': 0.0}
+2025-07-02 14:43:26,230 | DEBUG | Predictions head:
+   pred_Affinity(kcal/mol)
+0                -8.028493
+1                -8.014759
+2                -8.455206
+3                -8.158732
+4                -8.377974
+2025-07-02 14:46:52,317 | INFO | Initialised logger: RFModel.log
+2025-07-02 14:46:52,343 | INFO | Training random forest regressor model...
+2025-07-02 14:56:19,815 | INFO | Plotting feature importance
+2025-07-02 14:56:22,738 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-02 14:56:23,191 | INFO | Retraining complete and predictions made.
+2025-07-02 14:56:23,191 | INFO | Performance on total training data:
+{'Bias': 0.0439, 'SDEP': 0.4583, 'MSE': 0.2124, 'RMSE': 0.4608, 'r2': 0.7131, 'pearson_r': 0.8549, 'pearson_p': 0.0}
+2025-07-02 14:56:23,191 | INFO | Performance on ChEMBL training data:
+{'Bias': 0.0439, 'SDEP': 0.4583, 'MSE': 0.2124, 'RMSE': 0.4608, 'r2': 0.7131, 'pearson_r': 0.8549, 'pearson_p': 0.0}
+2025-07-02 14:56:27,641 | DEBUG | Predictions head:
+   pred_Affinity(kcal/mol)
+0                -8.052242
+1                -8.023109
+2                -8.439325
+3                -8.192661
+4                -8.371613
+2025-07-02 14:58:20,819 | INFO | Initialised logger: RFModel.log
+2025-07-02 14:58:20,819 | INFO | Training random forest regressor model...
+2025-07-02 15:07:58,987 | INFO | Plotting feature importance
+2025-07-02 15:08:01,232 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-02 15:08:01,576 | INFO | Retraining complete and predictions made.
+2025-07-02 15:08:01,576 | INFO | Performance on total training data:
+{'Bias': -0.0157, 'SDEP': 0.4943, 'MSE': 0.2446, 'RMSE': 0.4946, 'r2': 0.7119, 'pearson_r': 0.8662, 'pearson_p': 0.0}
+2025-07-02 15:08:01,576 | INFO | Performance on ChEMBL training data:
+{'Bias': -0.0157, 'SDEP': 0.4943, 'MSE': 0.2446, 'RMSE': 0.4946, 'r2': 0.7119, 'pearson_r': 0.8662, 'pearson_p': 0.0}
+2025-07-02 15:08:05,293 | DEBUG | Predictions head:
+   pred_Affinity(kcal/mol)
+0                -8.032724
+1                -8.001470
+2                -8.419232
+3                -8.162088
+4                -8.389421
+2025-07-02 15:15:55,039 | INFO | Initialised logger: RFModel.log
+2025-07-02 15:15:55,413 | INFO | Training random forest regressor model...
+2025-07-02 15:25:34,571 | INFO | Plotting feature importance
+2025-07-02 15:25:37,624 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-02 15:25:38,707 | INFO | Retraining complete and predictions made.
+2025-07-02 15:25:38,707 | INFO | Performance on total training data:
+{'Bias': -0.0009, 'SDEP': 0.4553, 'MSE': 0.2088, 'RMSE': 0.4555, 'r2': 0.7396, 'pearson_r': 0.8767, 'pearson_p': 0.0}
+2025-07-02 15:25:38,707 | INFO | Performance on ChEMBL training data:
+{'Bias': -0.0009, 'SDEP': 0.4553, 'MSE': 0.2088, 'RMSE': 0.4555, 'r2': 0.7396, 'pearson_r': 0.8767, 'pearson_p': 0.0}
+2025-07-02 15:25:43,534 | DEBUG | Predictions head:
+   pred_Affinity(kcal/mol)
+0                -8.054188
+1                -8.001994
+2                -8.450843
+3                -8.173420
+4                -8.352015
+2025-07-02 15:33:44,471 | INFO | Initialised logger: RFModel.log
+2025-07-02 15:33:44,473 | INFO | Training random forest regressor model...
+2025-07-02 15:43:16,716 | INFO | Plotting feature importance
+2025-07-02 15:43:19,323 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-02 15:43:19,693 | INFO | Retraining complete and predictions made.
+2025-07-02 15:43:19,694 | INFO | Performance on total training data:
+{'Bias': -0.0041, 'SDEP': 0.4573, 'MSE': 0.2099, 'RMSE': 0.4579, 'r2': 0.7137, 'pearson_r': 0.8564, 'pearson_p': 0.0}
+2025-07-02 15:43:19,694 | INFO | Performance on ChEMBL training data:
+{'Bias': -0.0041, 'SDEP': 0.4573, 'MSE': 0.2099, 'RMSE': 0.4579, 'r2': 0.7137, 'pearson_r': 0.8564, 'pearson_p': 0.0}
+2025-07-02 15:43:23,923 | DEBUG | Predictions head:
+   pred_Affinity(kcal/mol)
+0                -8.048823
+1                -8.024474
+2                -8.456399
+3                -8.152342
+4                -8.379487
+2025-07-02 16:01:50,445 | INFO | Initialised logger: RFModel.log
+2025-07-02 16:01:50,566 | INFO | Training random forest regressor model...
+2025-07-02 16:11:23,824 | INFO | Plotting feature importance
+2025-07-02 16:11:26,389 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-02 16:11:26,804 | INFO | Retraining complete and predictions made.
+2025-07-02 16:11:26,804 | INFO | Performance on total training data:
+{'Bias': 0.0123, 'SDEP': 0.4641, 'MSE': 0.2161, 'RMSE': 0.4645, 'r2': 0.7257, 'pearson_r': 0.8624, 'pearson_p': 0.0}
+2025-07-02 16:11:26,804 | INFO | Performance on ChEMBL training data:
+{'Bias': 0.0123, 'SDEP': 0.4641, 'MSE': 0.2161, 'RMSE': 0.4645, 'r2': 0.7257, 'pearson_r': 0.8624, 'pearson_p': 0.0}
+2025-07-02 16:11:31,154 | DEBUG | Predictions head:
+   pred_Affinity(kcal/mol)
+0                -8.080434
+1                -8.130565
+2                -8.463364
+3                -8.147879
+4                -8.347210
+2025-07-02 16:32:40,876 | INFO | Initialised logger: RFModel.log
+2025-07-02 16:32:40,876 | INFO | Training random forest regressor model...
+2025-07-02 16:42:08,294 | INFO | Plotting feature importance
+2025-07-02 16:42:10,859 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-02 16:42:11,230 | INFO | Retraining complete and predictions made.
+2025-07-02 16:42:11,230 | INFO | Performance on total training data:
+{'Bias': -0.0146, 'SDEP': 0.4885, 'MSE': 0.2392, 'RMSE': 0.4889, 'r2': 0.6971, 'pearson_r': 0.8496, 'pearson_p': 0.0}
+2025-07-02 16:42:11,230 | INFO | Performance on ChEMBL training data:
+{'Bias': -0.0146, 'SDEP': 0.4885, 'MSE': 0.2392, 'RMSE': 0.4889, 'r2': 0.6971, 'pearson_r': 0.8496, 'pearson_p': 0.0}
+2025-07-02 16:42:15,564 | DEBUG | Predictions head:
+   pred_Affinity(kcal/mol)
+0                -8.025525
+1                -8.017014
+2                -8.456778
+3                -8.151126
+4                -8.351749
+2025-07-02 16:45:37,625 | INFO | Initialised logger: RFModel.log
+2025-07-02 16:45:37,625 | INFO | Training random forest regressor model...
+2025-07-02 16:55:05,762 | INFO | Plotting feature importance
+2025-07-02 16:55:08,051 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-02 16:55:08,394 | INFO | Retraining complete and predictions made.
+2025-07-02 16:55:08,395 | INFO | Performance on total training data:
+{'Bias': 0.0216, 'SDEP': 0.4752, 'MSE': 0.2266, 'RMSE': 0.4758, 'r2': 0.6936, 'pearson_r': 0.846, 'pearson_p': 0.0}
+2025-07-02 16:55:08,395 | INFO | Performance on ChEMBL training data:
+{'Bias': 0.0216, 'SDEP': 0.4752, 'MSE': 0.2266, 'RMSE': 0.4758, 'r2': 0.6936, 'pearson_r': 0.846, 'pearson_p': 0.0}
+2025-07-02 16:55:12,343 | DEBUG | Predictions head:
+       pred_Affinity(kcal/mol)
+ID                            
+PMG-1                -8.037646
+PMG-2                -8.010364
+PMG-3                -8.439300
+PMG-4                -8.173781
+PMG-5                -8.358383
+2025-07-03 12:07:21,639 | INFO | Initialised logger: RFModel.log
+2025-07-03 12:07:21,724 | INFO | Training random forest regressor model...
+2025-07-03 12:16:56,523 | INFO | Plotting feature importance
+2025-07-03 12:16:59,405 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-03 12:16:59,844 | INFO | Retraining complete and predictions made.
+2025-07-03 12:16:59,844 | INFO | Performance on total training data:
+{'Bias': -0.0384, 'SDEP': 0.4541, 'MSE': 0.2111, 'RMSE': 0.4593, 'r2': 0.7315, 'pearson_r': 0.8733, 'pearson_p': 0.0}
+2025-07-03 12:16:59,844 | INFO | Performance on ChEMBL training data:
+{'Bias': -0.0384, 'SDEP': 0.4541, 'MSE': 0.2111, 'RMSE': 0.4593, 'r2': 0.7315, 'pearson_r': 0.8733, 'pearson_p': 0.0}
+2025-07-03 12:17:04,711 | DEBUG | Predictions head:
+       pred_Affinity(kcal/mol)
+ID                            
+PMG-1                -8.032424
+PMG-2                -8.064673
+PMG-3                -8.480336
+PMG-4                -8.134320
+PMG-5                -8.387518

@@ -82,22 +82,17 @@ project/
     │
     ├── models/                           
     │   ├── model_training/
-    │   │   ├── training_init_model.py
-    │   │   └── Submit_init_train.sh
-    │   ├── Submit_calc_new_test.sh
+    │   │   └── training_init_model.py
     │   └── RF_class.py                   # Contains RFModel class
     │
     ├── mol_sel/                          
     │   └── mol_sel_fns.py                # Molecule selection logic
     │
     └── run/
-        ├── Submit_run_DMTA.sh
         ├── run_DMTA.py                   # Main run script
         ├── workflow_fns.py            
-        ├── Submit_analysis.sh                    
         ├── analysis_fns.py                     
         ├── run_analysis.py                      
-        ├── Submit_average_all.sh                      
         ├── average_fns.py                    
         └── run_average.py
 ```

@@ -1,4 +1,4 @@
-# SimDMTA Workflow: Simulation Framefork for Iterative Docking-Based Molecular Selection Assessment
+# SimDMTA Workflow
 
 ![image](https://github.com/user-attachments/assets/aaa0d982-6aef-4bd9-b85c-f61f54285ee7)
 
@@ -96,6 +96,23 @@ project/
         ├── average_fns.py                    
         └── run_average.py
 ```
+
+## 🚀 Example Usage
+To run the SimDMTA workflow:
+
+python run_DMTA.py <n_cmpds> <sel_method> <start_iter> <total_iters> <run_date> <random_frac>
+
+### 🔧 Parameters
+| Argument      | Description                                                                                                                     |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `n_cmpds`     | Number of compounds to select in each iteration.                                                                                |
+| `sel_method`  | Molecule selection method. One of: `mp`, `mu`, `mpo`, `rmpo`, `rmp`, `rmu`, `r`.                                                |
+| `start_iter`  | Iteration number to start from. Use `1` for new runs; higher values to resume failed ones.                                      |
+| `total_iters` | Total number of iterations to run.                                                                                              |
+| `run_date`    | Identifier for the run, typically the current date in `YYYYMMDD` format.                                                        |
+| `random_frac` | Fraction to sample from during selection in `rmp`, `rmpo`, and `rmu` modes (e.g., `0.1` for 10%). Must be set even if not used. |
+
+
 
 ## 📫 Contact
 For questions, feedback, or collaboration ideas, feel free to reach out to:

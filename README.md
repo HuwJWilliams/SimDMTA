@@ -2,18 +2,18 @@
 
 ![image](https://github.com/user-attachments/assets/aaa0d982-6aef-4bd9-b85c-f61f54285ee7)
 
-## Project Overview
+## 🧠 Project Overview
 
 The SimDMTA project aims to accelerate the early stages of drug discovery by *simulating* the pharmaceutical Design–Make–Test–Analyse (*DMTA*) cycle. 
 This simulation enables us to evaluate the downstream effects of various molecule selection strategies on machine learning model performance.
 As AI becomes increasingly integrated into pharmaceutical research, it is essential to recognise the impact of model retraining on the quality and efficiency of candidate selection. 
 SimDMTA provides a framework for systematically assessing how selection strategies influence predictive performance and a model's hit-finding capabilities.
 
-## Citation
+## 📖 Citation
 If you use this framework in your research, please cite:
 [Manuscript in progress]
 
-## Molecule Selection/ Query Strategies
+## 🔬 Molecule Selection/ Query Strategies
 
 ### MP (Most Potent)
 Selects molecules with the best predicted docking scores (i.e., most negative binding affinities).
@@ -54,7 +54,7 @@ Type: Balanced / Explorative
 Combines multiple strategies in series (e.g., first filter by RMP, then pick the most uncertain).
 Type: User-defined mix of exploration and exploitation
 
-## Directory structure
+## 📁 Directory structure
 
 ```text
 project/
@@ -101,7 +101,7 @@ project/
 For questions, feedback, or collaboration ideas, feel free to reach out to:
 - Huw Williams (huwjwilliams@btinternet.com)
 
-## References
+## 🔗 References
 GNINA: 
 
 https://github.com/gnina/gnina

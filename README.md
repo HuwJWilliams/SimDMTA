@@ -96,6 +96,11 @@ project/
         ├── average_fns.py                    
         └── run_average.py
 ```
+## 📦 Creating the conda environment
+
+conda create -n simdmta_env python=3.9
+conda activate simdmta_env
+pip install -r requirements.txt
 
 ## 🚀 Example Usage
 To run the SimDMTA workflow:
@@ -112,6 +117,30 @@ python run_DMTA.py <n_cmpds> <sel_method> <start_iter> <total_iters> <run_date> 
 | `run_date`    | Identifier for the run, typically the current date in `YYYYMMDD` format.                                                        |
 | `random_frac` | Fraction to sample from during selection in `rmp`, `rmpo`, and `rmu` modes (e.g., `0.1` for 10%). Must be set even if not used. |
 
+To verify installation, you can run a small test:
+
+## 📈 Outputs
+```
+results/
+└── <run_name>/ # Unique run directory (based on selection method, date, etc.)
+├── it1/
+│ ├── all_preds_1.csv.gz                 # Predictions for molecules in batch 1
+│ ├── ...
+│ ├── all_preds_X.csv.gz                 # Predictions for molecules in final batch
+│ ├── best_params.json                   # Best hyperparameters found during training
+│ ├── feature_importance.df              # Feature importance values
+│ ├── feature_importance_plot.png
+│ ├── final_model.pkl                    # Trained random forest model
+│ ├── performance_stats.json             # Training stats (R², RMSE, etc.)
+│ ├── held_out_stats.json                # Performance on held-out test set
+│ └── training_data/
+│ ├── training_features.csv.gz
+│ └── training_targets.csv.gz
+│
+├── it2/
+├── ...
+└── itX/                                # Final iteration
+```
 
 
 ## 📫 Contact

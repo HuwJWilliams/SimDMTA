@@ -77,7 +77,7 @@ CHEMBL4243172,Cc1c(c(on1)C)c2ccc(=O)n(c2)Cc3ccc(c(c3)F)C4CO4,
 CHEMBL4246969,Cc1c(c(on1)C)c2ccc(=O)n(c2)Cc3ccc(cc3)C4CO4,
 CHEMBL4241469,Cc1c(c(on1)C)c2ccc(=O)n(c2)Cc3cccc(c3)F,
 CHEMBL4251258,Cc1c(c(on1)C)c2ccc(=O)n(c2)Cc3ccccc3,
-CHEMBL3220851,Cc1c(c(on1)C)c2ccc3c(c2)C(=O)CC3,
+CHEMBL3220851,Cc1c(c(on1)C)c2ccc3c(c2)C(=O)CC3,-8.51
 CHEMBL3785262,Cc1c(c(on1)C)c2ccc3c(c2)C(N(C(=O)N3)C)(C)c4ccccc4,
 CHEMBL3220860,Cc1c(c(on1)C)c2ccc3c(c2)C(CC3)(c4ccccc4)O,
 CHEMBL3220856,Cc1c(c(on1)C)c2ccc3c(c2)C(CC3)OCCC[NH+]4CCCC4,
@@ -120,7 +120,7 @@ CHEMBL3220873,Cc1c(c(on1)C)c2ccc3c(c2)ncn3Cc4ccc(c(c4)Cl)Cl,
 CHEMBL3220866,Cc1c(c(on1)C)c2ccc3c(c2)ncn3Cc4cccc(c4)Br,
 CHEMBL3220870,Cc1c(c(on1)C)c2ccc3c(c2)ncn3Cc4ccccc4[N+](=O)[O-],
 CHEMBL3220852,Cc1c(c(on1)C)c2ccc3cc[nH]c3c2,
-CHEMBL3220853,Cc1c(c(on1)C)c2ccc3c(c2)nc[nH]3,
+CHEMBL3220853,Cc1c(c(on1)C)c2ccc3c(c2)nc[nH]3,-8.04
 CHEMBL2335155,Cc1c(c(on1)C)c2ccc3c(c2)n(cn3)Cc4ccc(cc4)C#N,
 CHEMBL3220876,Cc1c(c(on1)C)c2ccc3c(c2)n(cn3)Cc4ccc(cc4)C(=O)N(C)C,
 CHEMBL3220872,Cc1c(c(on1)C)c2ccc3c(c2)n(cn3)Cc4ccc(c(c4)Cl)Cl,
@@ -176,7 +176,7 @@ CHEMBL4227207,Cn1cc(c2ccccc2c1=O)c3ccccc3,
 CHEMBL3769509,C[n+]1cc(c2c(c1O)cc(s2)C(=[NH2+])NC3CCS(=O)(=O)CC3)c4ccccc4,
 CHEMBL4228052,Cn1cc(c2ccccc2c1=O)c3ccccn3,
 CHEMBL4225695,Cn1cc(c2ccccc2c1=O)c3cnn(c3)C,
-CHEMBL4225700,Cn1cc(c2ccccc2c1=O)c3ncccn3,
+CHEMBL4225700,Cn1cc(c2ccccc2c1=O)c3ncccn3,-7.52
 CHEMBL4226566,Cn1cc(c2ccccc2c1=O)c3ncco3,-7.28
 CHEMBL4225460,Cn1cc(c2ccccc2c1=O)C(=O)NCc3ccccc3,
 CHEMBL3786682,Cn1cc-2c3c1c(=O)[nH]cc3CN(c4c2cc(cc4)CS(=O)(=O)C)c5ccccn5,
@@ -213,8 +213,8 @@ CHEMBL2349359,c1cc(sc1)S(=O)(=O)Nc2ccc(cc2NC(=O)C3CCCC3)c4csc(=O)[nH]4,
 CHEMBL2349361,c1cc(sc1)C(=O)Nc2cc(cc(c2)NS(=O)(=O)c3cccs3)c4csc(=O)[nH]4,
 CHEMBL3409998,c1cc(c(cc1c2csc(=O)[nH]2)S(=O)(=O)NC3CCCC3)NC(=O)C4CC4,
 CHEMBL4104390,c1cc(ncc1Cl)NC(=O)c2c(c(c(c(c2F)F)F)F)F,-7.49
-CHEMBL4062332,c1cc(cc(c1)S(=O)(=O)N2CCCC2)NC(=O)c3nc[nH]n3,
-CHEMBL525721,c1ccc(cc1)C(=O)Nc2c3c([nH]cn3)ncn2,
+CHEMBL4062332,c1cc(cc(c1)S(=O)(=O)N2CCCC2)NC(=O)c3nc[nH]n3,-7.5
+CHEMBL525721,c1ccc(cc1)C(=O)Nc2c3c([nH]cn3)ncn2,-7.81
 CHEMBL4165445,c1cc2c(ccc3c2c(c1)C(=O)N3CC(=O)[O-])S(=O)(=O)N4CCCC4,
 CHEMBL4100505,c1ccc(cc1)C(=O)c2ccc(cc2)[N-]S(=O)(=O)c3cccc(c3)Br,
 CHEMBL3953916,c1ccc(cc1)c2cccc(c2)C(=O)N3CCC(=O)Nc4c3cccc4,

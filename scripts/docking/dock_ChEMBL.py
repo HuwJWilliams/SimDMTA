@@ -1,37 +1,49 @@
 import pandas as pd
 import sys
-from glob import glob
+from pathlib import Path
 
-sys.path.insert(0, "/users/yhb18174/Recreating_DMTA/scripts/docking/")
-from docking_fns import Run_GNINA
+FILE_DIR = Path(__file__).resolve().parent
+PROJ_DIR = FILE_DIR.parents[2]
+SCRIPTS_DIR = PROJ_DIR / 'scripts'
+RESULTS_DIR = PROJ_DIR / 'results'
+DATASET_DIR = PROJ_DIR / "datasets"
 
-df = pd.read_csv(
-    "/users/yhb18174/Recreating_DMTA/datasets/held_out_data/PMG_held_out_docking.csv",
+sys.path.insert(0, str(SCRIPTS_DIR / "docking"))
+from docking_fns import RunGNINA
+
+sys.path.insert(0, str(SCRIPTS_DIR / "misc"))
+from misc_functions import readConfigJSON
+
+config_json = readConfigJSON(config_fpath=PROJ_DIR / 'config.json')
+data_paths = config_json['data']
+receptor_path = config_json["receptor"]
+
+train_df = pd.read_csv(
+    data_paths['it0_training_dock'],
     index_col=False,
 )
 
-docking_dir = "/users/yhb18174/Recreating_DMTA/docking/held_out_data/"
-smi_ls = list(df["SMILES"])
-molid_ls = list(df["ID"])
+hold_out_df = pd.read_csv(
+    data_paths['held_out_dock'],
+    index_col=False,
+)
 
-mp = Run_GNINA(
+docking_dir = PROJ_DIR / "docking"
+smi_ls = list(train_df["SMILES"])
+molid_ls = list(train_df["ID"])
+
+mp = RunGNINA(
     docking_dir=docking_dir,
     molid_ls=molid_ls,
     smi_ls=smi_ls,
-    receptor_path="/users/yhb18174/Recreating_DMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt",
+    receptor_path=receptor_path,
 )
 
 mp.ProcessMols(use_multiprocessing=True)
 
 ids, cnn_scores, aff_scores = mp.SubmitJobs(run_hrs=0, run_mins=20)
 
-# mol_dir_ls = [f'{docking_dir}{molid}' for molid in molid_ls]
-
 ids, cnn_scores, aff_scores = mp.MakeCsv(save_data=True)
-
-print(ids)
-print(cnn_scores)
-print(aff_scores)
 
 new_df = pd.DataFrame()
 new_df["ID"] = molid_ls
@@ -40,6 +52,6 @@ new_df["CNN_affinity"] = cnn_scores
 new_df["Affinity(kcal/mol)"] = aff_scores
 
 new_df.to_csv(
-    "/users/yhb18174/Recreating_DMTA/datasets/held_out_data/PMG_held_out_docked.csv",
+    f"test_data_paths['it0_training_dock']",
     index="ID",
 )

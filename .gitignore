@@ -1,7 +1,6 @@
 slurm*
 __pycache__/
 docking/
-datasets/
 results/
 scripts/docking/gnina
 *csv.gz

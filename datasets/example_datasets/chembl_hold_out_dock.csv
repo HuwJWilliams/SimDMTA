@@ -1,0 +1,16 @@
+ID,SMILES,Affinity(kcal/mol)
+CHEMBL2349350,c1cc(cc(c1)NS(=O)(=O)c2ccc(cc2)F)c3csc(=O)[nH]3,-7.9
+CHEMBL2349351,c1cc(cc(c1)NS(=O)(=O)c2cccnc2)c3csc(=O)[nH]3,-7.89
+CHEMBL2349349,c1cc(cc(c1)NS(=O)(=O)c2cccs2)c3csc(=O)[nH]3,-7.66
+CHEMBL4098993,c1cc(cc(c1)O)c2[nH]c(=O)c3c4c(sc3n2)CCCCC4,-8.72
+CHEMBL3409983,c1cc(cc(c1)S(=O)(=O)NC2CC2)c3csc(=O)[nH]3,-7.32
+CHEMBL3409982,c1cc(cc(c1)S(=O)(=O)NC2CCCC2)c3csc(=O)[nH]3,-7.42
+CHEMBL3409984,c1cc(cc(c1)S(=O)(=O)NC2CCCCC2)c3csc(=O)[nH]3,-7.74
+CHEMBL3409991,c1cc(cc(c1)S(=O)(=O)NC2CCOC2)c3csc(=O)[nH]3,-7.49
+CHEMBL3409990,c1cc(cc(c1)S(=O)(=O)NCC2CCCO2)c3csc(=O)[nH]3,-7.49
+CHEMBL3409987,c1cc(cc(c1)S(=O)(=O)[N-]c2ccon2)c3csc(=O)[nH]3,-7.64
+CHEMBL4069308,c1ccc(cc1)Cc2[nH]c(=O)c3c4c(sc3n2)CCCCC4,-8.13
+CHEMBL1507539,c1ccc2c(c1)c(=O)[nH]n(c2=O)CC3COC4(O3)CCCCC4,-8.03
+CHEMBL188678,c1ccc2c(c1)c3cccc(c3s2)c4cccc5c4oc(cc5=O)N6CCOCC6,-9.65
+CHEMBL278041,c1cc(ccc1c2[nH]c(c(n2)c3ccc(cc3)F)c4ccncc4)O,-8.93
+CHEMBL4096140,c1ccc2cc(ccc2c1)c3c4c(con4)c(nn3)c5ccco5,-8.34

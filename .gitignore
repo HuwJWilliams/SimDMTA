@@ -3,8 +3,11 @@ __pycache__/
 docking/
 datasets/
 results/
-!scripts/docking
-!scripts/datasets
 scripts/docking/gnina
 *csv.gz
+*.tar.gz
 *.sh
+!scripts/docking
+!scripts/datasets
+!datasets/example_datasets
+datasets/example_datasets/*/

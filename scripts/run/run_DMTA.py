@@ -6,12 +6,15 @@ FILE_DIR = Path(__file__).resolve().parent
 PROJ_DIR = FILE_DIR.parents[1]
 DATASET_DIR = PROJ_DIR / 'datasets'
 RESULTS_DIR =  PROJ_DIR / 'results'
+SCRIPTS_DIR  = PROJ_DIR / 'scripts'
 
 ORIGINAL_DIR = FILE_DIR.parents[2] / 'Recreating_DMTA'
 
-sys.path.insert(0, str(PROJ_DIR / 'scripts' / 'models'))
-
+sys.path.insert(0, str(SCRIPTS_DIR / 'models'))
 from RF_class import RFModel
+
+sys.path.insert(0, str(SCRIPTS_DIR / 'misc'))
+from misc_functions import readConfigJSON
 
 # Iteration variables (adjusted within the .sh files)
 start_iter = int(sys.argv[3])
@@ -31,23 +34,27 @@ id_prefix = "PMG-"
 max_confs = 100
 log_level="DEBUG"
 
+config_json = readConfigJSON(config_fpath=PROJ_DIR / 'config.json')
+model_path = config_json['it0_model_dir']
+data_paths = config_json['data']
+
 # Pathing
-full_data_fpath =  DATASET_DIR / "test_dataset"
-full_data_fprefix = "PMG_rdkit_*.csv.gz"
+full_data_fpath =  Path(data_paths["selection_pool_full"]).parent
+full_data_fprefix = Path(data_paths["selection_pool_full"]).name
 
-desc_fpath = DATASET_DIR / "test_dataset"
-desc_fprefix = "PMG_rdkit_desc_*"
+desc_fpath = Path(data_paths["selection_pool_desc"]).parent
+desc_fprefix = Path(data_paths["selection_pool_desc"]).stem
 
-docked_data_fpath = DATASET_DIR / "test_dataset"
-docked_data_fprefix = "PMG_docking_*"
+docked_data_fpath = Path(data_paths["selection_pool_dock"]).parent 
+docked_data_fprefix = Path(data_paths["selection_pool_dock"]).stem
 
-init_model_dir = RESULTS_DIR / 'init_RF_model' / 'it0_test'
+init_model_dir = model_path
 
 chosen_mol_file = RESULTS_DIR / run_name / 'chosen_mol.csv'
 
-held_out_test_feats = DATASET_DIR / "test_dataset" / 'PMG_held_out_desc_trimmed.csv'
-held_out_test_targs = DATASET_DIR / "test_dataset" / 'PMG_held_out_targ_trimmed.csv'
-held_out_test_full = DATASET_DIR / "test_dataset" / 'PMG_rdkit_full.csv'
+held_out_test_feats = Path(data_paths["held_out_desc"])
+held_out_test_targs = Path(data_paths["held_out_dock"])
+held_out_test_full = Path(data_paths["held_out_full"])
 
 # Running the Workflow
 run = SimDMTA(
@@ -59,6 +66,7 @@ run = SimDMTA(
     docked_data_fprefix=docked_data_fprefix,
     start_iter=start_iter,
     total_iters=total_iters,
+    id_prefix="CHEMBL",
     n_cmpds=n_cmpds,
     results_dir=RESULTS_DIR,
     init_model_dir=init_model_dir,

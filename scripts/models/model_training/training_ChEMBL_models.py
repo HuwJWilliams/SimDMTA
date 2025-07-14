@@ -25,7 +25,7 @@ from RF_class import RFModel
 import pandas as pd
 
 sys.path.insert(0, SCRIPTS_DIR / "misc")
-from misc_functions import resolveFiles
+from misc_functions import readConfigJSON
 
 n_resamples = 50
 inner_cv_type = ("kfold",)
@@ -43,8 +43,11 @@ hyper_params = {
     "rf__min_samples_leaf": [10, 20, 30],
 }
 
-training_path = DATASET_DIR / "test_dataset"
-targs_df = pd.read_csv(training_path / "ChEMBL_docking_all.csv", index_col="ID")
+config_json = readConfigJSON(config_fpath=PROJ_DIR / 'config.json')
+model_path = config_json['it0_model_dir']
+data_paths = config_json['data']
+
+targs_df = pd.read_csv(data_paths["it0_training_dock"], index_col="ID")
 
 # Setting up input targets, removing any ones which failed to dock
 targs = targs_df[["Affinity(kcal/mol)"]]
@@ -52,18 +55,17 @@ falsetargs = targs_df[targs_df["Affinity(kcal/mol)"] == "False"]
 targs = targs.drop(index=falsetargs.index)
 
 feats_df = pd.read_csv(
-    training_path / "ChEMBL_rdkit_desc_trimmed.csv",
+    data_paths["it0_training_desc"],
     index_col="ID",
 )
-save_path = (
-    RESULTS_DIR / "init_RF_model" / "it0_test_2"
-)
+save_path = Path(model_path)
 
 save_path.mkdir(exist_ok=True)
 training_data_path = save_path / "training_data"
 training_data_path.mkdir(exist_ok=True)
 
 trained_features = feats_df.drop(index=falsetargs.index)
+
 print("1: trained features")
 print(trained_features)
 
@@ -80,11 +82,10 @@ model.trainRegressor(
 )
 
 # Define file paths and prefixes
-data_fpath = DATASET_DIR / "test_dataset"
-desc_file = data_fpath / "PMG_rdkit_desc_1.csv"
-full_file = data_fpath / "PMG_rdkit_1.csv.gz"
-held_out_desc_file = "PMG_held_out_desc_trimmed.csv"
-held_out_targ_file = "PMG_held_out_targ_trimmed.csv"
+desc_file = data_paths["selection_pool_desc"]
+full_file = data_paths["selection_pool_full"]
+held_out_desc_file = data_paths["held_out_desc"]
+held_out_targ_file = data_paths["held_out_dock"]
 
 
 desc_df = pd.read_csv(desc_file, index_col="ID")
@@ -115,8 +116,8 @@ rf_model = joblib.load(rf_pkl)
 with open(rf_pkl, "rb") as feats:
     data = pickle.load(feats)
 
-feats_df = pd.read_csv(data_fpath / held_out_desc_file, index_col="ID")
-ho_df = pd.read_csv(data_fpath / held_out_targ_file, index_col="ID")
+feats_df = pd.read_csv(held_out_desc_file, index_col="ID")
+ho_df = pd.read_csv(held_out_targ_file, index_col="ID")
 
 ho = ho_df[[docking_column]]
 falseho = ho_df[ho_df[docking_column] == "False"]
@@ -154,24 +155,6 @@ ho_[f"pred_{docking_column}"] = preds
 
 true = ho_[docking_column].astype(float)
 pred = ho_[f"pred_{docking_column}"].astype(float)
-
-# Create scatter plot
-sns.scatterplot(data=ho_, x=f"pred_{docking_column}", y=docking_column)
-
-# Get current axis
-ax = plt.gca()
-
-# Set ticks for x and y axes
-x_ticks = np.linspace(ax.get_xlim()[0], ax.get_xlim()[1], 10)
-y_ticks = np.linspace(ax.get_ylim()[0], ax.get_ylim()[1], 10)
-
-ax.set_xticks(x_ticks)
-ax.set_yticks(y_ticks)
-
-ax.set_title("Predicted DS score vs Actual DS score")
-
-# Show plot
-plt.savefig(save_path / "init_preds_vs_actual.png")
 
 errors = true - pred
 

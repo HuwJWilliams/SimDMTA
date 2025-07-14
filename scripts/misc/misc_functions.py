@@ -77,6 +77,8 @@ def molid2BatchNo(molid: str, prefix: str, dataset_file: str, chunksize: int = 1
 
     mol_no = int(molid.replace(prefix, ""))
 
+    logger.debug(f"Stripped molid {molid} of prefix '{prefix}' leaving {mol_no}")
+
     if file_ls is None:
         file_ls = glob(str(dataset_file))
         file_ls.sort(key=lambda x: int(re.search(r"\d+", x).group()))
@@ -578,3 +580,11 @@ def resolveFiles(pattern: str, allow_single: bool = True, logger=None):
     if logger and not files:
         logger.warning(f"No files matched pattern: {pattern}")
     return orderFiles(files)
+
+def readConfigJSON(config_fpath: str):
+    """Reads config files and returns pathways to relevant data"""
+
+    with open(str(config_fpath), "r") as f:
+        data = json.load(f)
+
+    return data

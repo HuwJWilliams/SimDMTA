@@ -1,0 +1,14 @@
+{
+    "it0_model_dir": "/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/",
+    "data": {
+        "it0_training_desc": "/users/yhb18174/SimDMTA/datasets/example_datasets/chembl_train_desc.csv",
+        "it0_training_full": "/users/yhb18174/SimDMTA/datasets/example_datasets/chembl_train_full.csv",
+        "it0_training_dock": "/users/yhb18174/SimDMTA/datasets/example_datasets/chembl_train_dock.csv",
+        "selection_pool_desc": "/users/yhb18174/SimDMTA/datasets/example_datasets/chembl_selection_desc.csv",
+        "selection_pool_full": "/users/yhb18174/SimDMTA/datasets/example_datasets/chembl_selection_full.csv",
+        "selection_pool_dock": "/users/yhb18174/SimDMTA/datasets/example_datasets/chembl_selection_dock.csv",
+        "held_out_desc": "/users/yhb18174/SimDMTA/datasets/example_datasets/chembl_hold_out_desc.csv",
+        "held_out_full": "/users/yhb18174/SimDMTA/datasets/example_datasets/chembl_hold_out_full.csv",
+        "held_out_dock": "/users/yhb18174/SimDMTA/datasets/example_datasets/chembl_hold_out_dock.csv"
+    }
+}

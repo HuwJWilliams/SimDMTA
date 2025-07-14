@@ -171,3 +171,201 @@ PMG-2                -8.064673
 PMG-3                -8.480336
 PMG-4                -8.134320
 PMG-5                -8.387518
+
+
+2025-07-14 12:32:45,175 | INFO | Initialised logger: RFModel.log
+2025-07-14 12:32:45,191 | INFO | Training random forest regressor model...
+2025-07-14 12:42:18,128 | INFO | Plotting feature importance
+2025-07-14 12:42:20,800 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test_2/final_model.pkl
+2025-07-14 12:42:21,144 | INFO | Retraining complete and predictions made.
+2025-07-14 12:42:21,144 | INFO | Performance on total training data:
+{'Bias': 0.0104, 'SDEP': 0.4971, 'MSE': 0.2478, 'RMSE': 0.4972, 'r2': 0.6908, 'pearson_r': 0.8427, 'pearson_p': 0.0}
+2025-07-14 12:42:21,144 | INFO | Performance on ChEMBL training data:
+{'Bias': 0.0104, 'SDEP': 0.4971, 'MSE': 0.2478, 'RMSE': 0.4972, 'r2': 0.6908, 'pearson_r': 0.8427, 'pearson_p': 0.0}
+2025-07-14 12:42:25,170 | DEBUG | 1 Predictions head:
+       pred_Affinity(kcal/mol)
+ID                            
+PMG-1                -8.022514
+PMG-2                -8.014377
+PMG-3                -8.439154
+PMG-4                -8.149131
+PMG-5                -8.356237
+2025-07-14 12:42:25,172 | DEBUG | 2 Predictions head:
+       pred_Affinity(kcal/mol)
+ID                            
+PMG-1                -8.022514
+PMG-2                -8.014377
+PMG-3                -8.439154
+PMG-4                -8.149131
+PMG-5                -8.356237
+2025-07-14 12:43:03,072 | DEBUG | DF prior to MPO calculation:
+Index(['PMG-1', 'PMG-2', 'PMG-3', 'PMG-4', 'PMG-5'], dtype='object', name='ID')
+2025-07-14 12:43:03,074 | DEBUG | preds_df index sample:
+Index(['PMG-1', 'PMG-2', 'PMG-3', 'PMG-4', 'PMG-5'], dtype='object', name='ID')
+2025-07-14 12:43:03,074 | DEBUG | df index sample:
+Index(['PMG-1', 'PMG-2', 'PMG-3', 'PMG-4', 'PMG-5'], dtype='object', name='ID')
+2025-07-14 12:43:03,111 | DEBUG | DF after joining:
+Index(['PMG-1', 'PMG-2', 'PMG-3', 'PMG-4', 'PMG-5'], dtype='object', name='ID')
+2025-07-14 12:43:03,159 | DEBUG | DF after MPO calculation:
+Index(['PMG-1', 'PMG-2', 'PMG-3', 'PMG-4', 'PMG-5'], dtype='object', name='ID')
+2025-07-14 12:43:03,361 | DEBUG | 3 Predictions head:
+       oe_logp   PFI  pred_Affinity(kcal/mol)       MPO  Uncertainty
+ID                                                                  
+PMG-1     3.18  5.18                -8.022514  7.571224     0.429074
+PMG-2     2.53  4.53                -8.014377  7.772519     0.655564
+PMG-3     3.25  6.25                -8.439154  7.189761     0.538396
+PMG-4     3.63  5.63                -8.149131  7.452468     0.499542
+PMG-5     1.81  4.81                -8.356237  8.025800     0.449649
+2025-07-14 12:55:57,192 | INFO | Initialised logger: RFModel.log
+2025-07-14 12:55:57,224 | INFO | Training random forest regressor model...
+2025-07-14 13:06:39,307 | INFO | Initialised logger: RFModel.log
+2025-07-14 13:06:39,310 | INFO | Training random forest regressor model...
+2025-07-14 13:14:37,102 | INFO | Plotting feature importance
+2025-07-14 13:14:39,181 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-14 13:14:39,464 | INFO | Retraining complete and predictions made.
+2025-07-14 13:14:39,464 | INFO | Performance on total training data:
+{'Bias': 0.0156, 'SDEP': 0.4986, 'MSE': 0.2539, 'RMSE': 0.5034, 'r2': 0.6879, 'pearson_r': 0.8423, 'pearson_p': 0.0}
+2025-07-14 13:14:39,464 | INFO | Performance on ChEMBL training data:
+{'Bias': 0.0156, 'SDEP': 0.4986, 'MSE': 0.2539, 'RMSE': 0.5034, 'r2': 0.6879, 'pearson_r': 0.8423, 'pearson_p': 0.0}
+2025-07-14 13:14:43,434 | DEBUG | 1 Predictions head:
+       pred_Affinity(kcal/mol)
+ID                            
+PMG-1                -8.020676
+PMG-2                -7.914672
+PMG-3                -8.347389
+PMG-4                -8.086807
+PMG-5                -8.348324
+2025-07-14 13:14:43,436 | DEBUG | 2 Predictions head:
+       pred_Affinity(kcal/mol)
+ID                            
+PMG-1                -8.020676
+PMG-2                -7.914672
+PMG-3                -8.347389
+PMG-4                -8.086807
+PMG-5                -8.348324
+2025-07-14 13:15:21,754 | DEBUG | DF prior to MPO calculation:
+Index(['PMG-1', 'PMG-2', 'PMG-3', 'PMG-4', 'PMG-5'], dtype='object', name='ID')
+2025-07-14 13:15:21,755 | DEBUG | preds_df index sample:
+Index(['PMG-1', 'PMG-2', 'PMG-3', 'PMG-4', 'PMG-5'], dtype='object', name='ID')
+2025-07-14 13:15:21,755 | DEBUG | df index sample:
+Index(['PMG-1', 'PMG-2', 'PMG-3', 'PMG-4', 'PMG-5'], dtype='object', name='ID')
+2025-07-14 13:15:21,792 | DEBUG | DF after joining:
+Index(['PMG-1', 'PMG-2', 'PMG-3', 'PMG-4', 'PMG-5'], dtype='object', name='ID')
+2025-07-14 13:15:21,841 | DEBUG | DF after MPO calculation:
+Index(['PMG-1', 'PMG-2', 'PMG-3', 'PMG-4', 'PMG-5'], dtype='object', name='ID')
+2025-07-14 13:15:22,048 | DEBUG | 3 Predictions head:
+       oe_logp   PFI  pred_Affinity(kcal/mol)       MPO  Uncertainty
+ID                                                                  
+PMG-1     3.18  5.18                -8.020676  7.569490     0.418209
+PMG-2     2.53  4.53                -7.914672  7.675823     0.605602
+PMG-3     3.25  6.25                -8.347389  7.111581     0.428775
+PMG-4     3.63  5.63                -8.086807  7.395473     0.466915
+PMG-5     1.81  4.81                -8.348324  8.018200     0.408670
+2025-07-14 13:30:00,984 | INFO | Initialised logger: RFModel.log
+2025-07-14 13:30:00,987 | INFO | Training random forest regressor model...
+2025-07-14 13:38:01,720 | INFO | Plotting feature importance
+2025-07-14 13:38:03,720 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-14 13:38:04,002 | INFO | Retraining complete and predictions made.
+2025-07-14 13:38:04,002 | INFO | Performance on total training data:
+{'Bias': 0.025, 'SDEP': 0.487, 'MSE': 0.2388, 'RMSE': 0.4885, 'r2': 0.6973, 'pearson_r': 0.8422, 'pearson_p': 0.0}
+2025-07-14 13:38:04,002 | INFO | Performance on ChEMBL training data:
+{'Bias': 0.025, 'SDEP': 0.487, 'MSE': 0.2388, 'RMSE': 0.4885, 'r2': 0.6973, 'pearson_r': 0.8422, 'pearson_p': 0.0}
+2025-07-14 13:38:04,100 | DEBUG | 1 Predictions head:
+               pred_Affinity(kcal/mol)
+ID                                    
+CHEMBL3974456                -9.218038
+CHEMBL3912346                -9.160562
+CHEMBL3975427                -9.224622
+CHEMBL3946085                -8.933916
+CHEMBL3969225                -9.262154
+2025-07-14 13:38:04,102 | DEBUG | 2 Predictions head:
+               pred_Affinity(kcal/mol)
+ID                                    
+CHEMBL3974456                -9.218038
+CHEMBL3912346                -9.160562
+CHEMBL3975427                -9.224622
+CHEMBL3946085                -8.933916
+CHEMBL3969225                -9.262154
+2025-07-14 13:47:40,978 | INFO | Initialised logger: RFModel.log
+2025-07-14 13:47:40,980 | INFO | Training random forest regressor model...
+2025-07-14 13:55:44,359 | INFO | Plotting feature importance
+2025-07-14 13:55:46,664 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-14 13:55:46,970 | INFO | Retraining complete and predictions made.
+2025-07-14 13:55:46,970 | INFO | Performance on total training data:
+{'Bias': -0.0015, 'SDEP': 0.4736, 'MSE': 0.225, 'RMSE': 0.4742, 'r2': 0.6854, 'pearson_r': 0.8367, 'pearson_p': 0.0}
+2025-07-14 13:55:46,970 | INFO | Performance on ChEMBL training data:
+{'Bias': -0.0015, 'SDEP': 0.4736, 'MSE': 0.225, 'RMSE': 0.4742, 'r2': 0.6854, 'pearson_r': 0.8367, 'pearson_p': 0.0}
+2025-07-14 13:55:47,093 | DEBUG | 1 Predictions head:
+               pred_Affinity(kcal/mol)
+ID                                    
+CHEMBL3974456                -9.254028
+CHEMBL3912346                -9.183108
+CHEMBL3975427                -9.234157
+CHEMBL3946085                -8.936570
+CHEMBL3969225                -9.289824
+2025-07-14 13:55:47,095 | DEBUG | 2 Predictions head:
+               pred_Affinity(kcal/mol)
+ID                                    
+CHEMBL3974456                -9.254028
+CHEMBL3912346                -9.183108
+CHEMBL3975427                -9.234157
+CHEMBL3946085                -8.936570
+CHEMBL3969225                -9.289824
+2025-07-14 13:56:41,623 | INFO | Initialised logger: RFModel.log
+2025-07-14 13:56:41,623 | INFO | Training random forest regressor model...
+2025-07-14 14:04:44,925 | INFO | Plotting feature importance
+2025-07-14 14:04:46,936 | DEBUG | Saving final model to:
+/users/yhb18174/SimDMTA/results/init_RF_model/it0_test/final_model.pkl
+2025-07-14 14:04:47,293 | INFO | Retraining complete and predictions made.
+2025-07-14 14:04:47,293 | INFO | Performance on total training data:
+{'Bias': 0.0126, 'SDEP': 0.4736, 'MSE': 0.2253, 'RMSE': 0.4745, 'r2': 0.7035, 'pearson_r': 0.8462, 'pearson_p': 0.0}
+2025-07-14 14:04:47,293 | INFO | Performance on ChEMBL training data:
+{'Bias': 0.0126, 'SDEP': 0.4736, 'MSE': 0.2253, 'RMSE': 0.4745, 'r2': 0.7035, 'pearson_r': 0.8462, 'pearson_p': 0.0}
+2025-07-14 14:04:47,387 | DEBUG | 1 Predictions head:
+               pred_Affinity(kcal/mol)
+ID                                    
+CHEMBL3974456                -9.212793
+CHEMBL3912346                -9.162735
+CHEMBL3975427                -9.217631
+CHEMBL3946085                -8.915752
+CHEMBL3969225                -9.269757
+2025-07-14 14:04:47,389 | DEBUG | 2 Predictions head:
+               pred_Affinity(kcal/mol)
+ID                                    
+CHEMBL3974456                -9.212793
+CHEMBL3912346                -9.162735
+CHEMBL3975427                -9.217631
+CHEMBL3946085                -8.915752
+CHEMBL3969225                -9.269757
+2025-07-14 14:04:48,056 | DEBUG | DF prior to MPO calculation:
+Index(['CHEMBL3974456', 'CHEMBL3912346', 'CHEMBL3975427', 'CHEMBL3946085',
+       'CHEMBL3969225'],
+      dtype='object', name='ID')
+2025-07-14 14:04:48,056 | DEBUG | preds_df index sample:
+Index(['CHEMBL3974456', 'CHEMBL3912346', 'CHEMBL3975427', 'CHEMBL3946085',
+       'CHEMBL3969225'],
+      dtype='object', name='ID')
+2025-07-14 14:04:48,056 | DEBUG | df index sample:
+Index(['CHEMBL3974456', 'CHEMBL3912346', 'CHEMBL3975427', 'CHEMBL3946085',
+       'CHEMBL3969225'],
+      dtype='object', name='ID')
+2025-07-14 14:04:48,058 | DEBUG | DF after joining:
+Index(['CHEMBL3974456', 'CHEMBL3912346', 'CHEMBL3975427', 'CHEMBL3946085',
+       'CHEMBL3969225'],
+      dtype='object', name='ID')
+2025-07-14 14:04:48,072 | DEBUG | DF after MPO calculation:
+Index(['CHEMBL3974456', 'CHEMBL3912346', 'CHEMBL3975427', 'CHEMBL3946085',
+       'CHEMBL3969225'],
+      dtype='object', name='ID')
+2025-07-14 14:04:48,077 | DEBUG | 3 Predictions head:
+               oe_logp   PFI  pred_Affinity(kcal/mol)       MPO  Uncertainty
+ID                                                                          
+CHEMBL3974456     3.52  7.52                -9.212793  5.691183     0.390857
+CHEMBL3912346     3.29  7.29                -9.162735  6.142708     0.404046
+CHEMBL3975427     3.50  7.50                -9.217631  5.737600     0.440132
+CHEMBL3946085     4.04  8.04                -8.915752  4.368730     0.517929
+CHEMBL3969225     3.67  7.67                -9.269757  5.392768     0.456878

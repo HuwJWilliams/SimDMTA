@@ -79,7 +79,7 @@ class SimDMTA:
             "rf__min_samples_split": [2, 5],
             "rf__min_samples_leaf": [2, 4, 8]
         },
-        username: str = "yhb18174",
+        username: str = "",
         sel_size: int=0.1,
         
         log_level: str = "DEBUG",

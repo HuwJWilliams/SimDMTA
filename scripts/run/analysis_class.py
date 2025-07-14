@@ -1010,6 +1010,7 @@ class Analysis:
         sample_size: int = 15,
         conf_gen_plot: bool = True,
         score_convergence: bool = True,
+        save_path: str=""
     ):
         """
         Description
@@ -1112,7 +1113,7 @@ class Analysis:
             plt.ylabel("Number of conformers made")
             plt.xlabel("Molecule ID")
             plt.tight_layout()
-            plt.savefig("/users/yhb18174/Recreating_DMTA/scripts/run/conf_gen_plot.png")
+            plt.savefig(f"{save_path}/conf_gen_plot.png")
             plt.show()
 
         if score_convergence:
@@ -2639,10 +2640,7 @@ class Analysis:
         tick_fontsize: int = 20,
         label_fontsize: int = 24,
         exp_suffix=None,
-        extra_sources: dict = {
-            "ChEMBL": "/users/yhb18174/Recreating_DMTA/datasets/ChEMBL/training_data/desc/rdkit/ChEMBL_rdkit_desc_trimmed.csv",
-            "Hits": "/users/yhb18174/Recreating_DMTA/datasets/hits/hits_features.csv",
-        }
+        extra_sources: dict = {}
     ):
         save_path = self.plot_dir / 'feature_ridgeline_plots'
         if not save_path.exists():

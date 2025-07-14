@@ -14,11 +14,6 @@ SCRIPTS_DIR = PROJ_DIR / 'scripts'
 RESULTS_DIR = PROJ_DIR / 'results'
 DATASET_DIR = PROJ_DIR / "datasets"
 
-print(FILE_DIR)
-print(PROJ_DIR)
-print(SCRIPTS_DIR)
-print(RESULTS_DIR)
-print(DATASET_DIR)
 
 sys.path.insert(0, str(FILE_DIR.parent))
 from RF_class import RFModel

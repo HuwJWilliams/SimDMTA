@@ -18,7 +18,7 @@ PROJ_DIR = FILE_DIR.parents[1]
 SCRIPTS_DIR = PROJ_DIR / 'scripts'
 DATASETS_DIR = PROJ_DIR / 'datasets'
 
-def wait4Jobs(job_id_ls: list, username: str = "yhb18174", wait_time: int = 60, logger=None):
+def wait4Jobs(job_id_ls: list, username: str = "", wait_time: int = 60, logger=None):
 
     if logger is None:
         logger = logging.getLogger(__name__)

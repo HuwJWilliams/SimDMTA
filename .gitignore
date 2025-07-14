@@ -6,6 +6,9 @@ scripts/docking/gnina
 *csv.gz
 *.tar.gz
 *.sh
+*.log
+*.out
+
 !scripts/docking
 !scripts/datasets
 !datasets/example_datasets

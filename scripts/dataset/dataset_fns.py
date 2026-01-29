@@ -101,7 +101,7 @@ class DatasetFormatter:
             canon_smi = Chem.MolToSmiles(canon_mol)
             return has_core, frag_smi, canon_smi
 
-        # Path to keep ingthe tautomeric form of the original core
+        # Path to keep using the tautomeric form of the original core
         else:
             core_mol = Chem.MolFromSmiles(core_smi)
 

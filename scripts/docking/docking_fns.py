@@ -979,6 +979,7 @@ class RunGNINA:
     ):
         """
         Parse GNINA .log files to extract docking scores and update docking CSV files.
+        Saves both the best affinity and best CNN poses as SDF files.
         Skips molecules if a valid docking score is already present.
         """
         if mol_dir_path_ls is not None and molid_ls is not None:
@@ -994,7 +995,7 @@ class RunGNINA:
             log_file_path = mol_dir_path / f"{molid}.log"
             tar_file_path = mol_dir_path.with_suffix(".tar.gz")
 
-                # --- Check for existing docking score ---
+            # --- Check for existing docking score ---
             try:
                 batch_no = molid2BatchNo(molid=molid, prefix="PMG-", dataset_file=self.targ_file)
                 dock_batch_csv = self.targ_file.replace("*", str(batch_no))
@@ -1031,9 +1032,11 @@ class RunGNINA:
 
             if not table_start_indices:
                 combined_df = pd.DataFrame(
-                    data={ "ID": [f"{molid}_conf_0_pose_0"], "conf_no": [0], "Pose_no": [0],
+                    data={
+                        "ID": [f"{molid}_conf_0_pose_0"], "conf_no": [0], "Pose_no": [0],
                         "Affinity(kcal/mol)": ["False"], "Intramol(kcal/mol)": ["False"],
-                        "CNN_Pose_Score": ["False"], "CNN_affinity": ["False"] })
+                        "CNN_Pose_Score": ["False"], "CNN_affinity": ["False"]
+                    })
 
             for j, start_idx in enumerate(table_start_indices):
                 df_lines = lines[start_idx + 3:]
@@ -1061,12 +1064,17 @@ class RunGNINA:
 
                 combined_df = pd.concat([combined_df, pose_df], ignore_index=True)
 
+            # --- Identify best scoring poses ---
             try:
                 max_cnn = combined_df["CNN_affinity"].astype(float).max()
                 min_aff = combined_df["Affinity(kcal/mol)"].astype(float).min()
-            except:
-                max_cnn = "False"
-                min_aff = "False"
+
+                best_aff_row = combined_df.loc[combined_df["Affinity(kcal/mol)"].astype(float).idxmin()]
+                best_cnn_row = combined_df.loc[combined_df["CNN_affinity"].astype(float).idxmax()]
+            except Exception as e:
+                self.logger.error(f"Error processing scores for {molid}: {e}")
+                max_cnn, min_aff = "False", "False"
+                best_aff_row, best_cnn_row = None, None
 
             top_cnn_aff_ls.append(max_cnn)
             top_aff_ls.append(min_aff)
@@ -1078,9 +1086,33 @@ class RunGNINA:
 
                 try:
                     docking_df.at[molid, "Affinity(kcal/mol)"] = min_aff
+                    # Optionally save best pose IDs in docking CSV
+                    docking_df.at[molid, "BestPose_Affinity"] = best_aff_row["ID"] if best_aff_row is not None else ""
+                    docking_df.at[molid, "BestPose_CNN"] = best_cnn_row["ID"] if best_cnn_row is not None else ""
                     docking_df.to_csv(dock_batch_csv, index_label="ID")
                 except Exception as e:
                     self.logger.error(f"Could not update docking CSV for {molid}: {e}")
+
+                # --- Save best poses as separate SDF files ---
+                try:
+                    gnina_sdf = Path(mol_dir) / f"{molid}_pose.sdf"
+                    if gnina_sdf.exists():
+                        suppl = Chem.SDMolSupplier(str(gnina_sdf), removeHs=False)
+
+                        if best_aff_row is not None:
+                            best_aff_idx = int(best_aff_row["Pose_no"]) - 1
+                            best_aff_mol = suppl[best_aff_idx]
+                            if best_aff_mol:
+                                Chem.MolToMolFile(best_aff_mol, str(Path(mol_dir) / f"{molid}_best_affinity.sdf"))
+
+                        if best_cnn_row is not None:
+                            best_cnn_idx = int(best_cnn_row["Pose_no"]) - 1
+                            best_cnn_mol = suppl[best_cnn_idx]
+                            if best_cnn_mol:
+                                Chem.MolToMolFile(best_cnn_mol, str(Path(mol_dir) / f"{molid}_best_cnn.sdf"))
+
+                except Exception as e:
+                    self.logger.error(f"Failed to save best poses for {molid}: {e}")
 
             if extracted and mol_dir_path.exists():
                 shutil.rmtree(mol_dir_path, ignore_errors=True)

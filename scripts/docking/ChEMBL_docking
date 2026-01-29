@@ -1,0 +1,156 @@
+2025-09-15 11:32:25,515 | INFO | Initialised logger: ChEMBL_docking
+2025-09-15 11:32:25,515 | DEBUG | Random Seed: 1870455241
+2025-09-15 11:32:25,515 | WARNING | /users/yhb18174/SimDMTA/docking/kirsty-1-1 exists
+2025-09-15 11:32:25,516 | WARNING | /users/yhb18174/SimDMTA/docking/kirsty-1-2 exists
+2025-09-15 11:32:25,516 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-1-1 exists
+2025-09-15 11:32:25,516 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-1-2 exists
+2025-09-15 11:32:25,516 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-2-1 exists
+2025-09-15 11:32:25,516 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-2-2 exists
+2025-09-15 11:32:27,109 | DEBUG | Conformers generated: [[76], [], [], [], []] |Tautomers: 5 |Enantiomers: [1, 1, 1, 1, 1] |Disallowed: 4
+2025-09-15 11:32:27,375 | DEBUG | Conformers generated: [[76], [], [], [], []] |Tautomers: 5 |Enantiomers: [1, 1, 1, 1, 1] |Disallowed: 4
+2025-09-15 11:32:31,062 | DEBUG | Conformers generated: [[1000], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:32:34,827 | DEBUG | Conformers generated: [[1000], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:32:37,199 | DEBUG | Conformers generated: [[582], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:32:39,583 | DEBUG | Conformers generated: [[584], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:37:57,526 | INFO | Initialised logger: ChEMBL_docking
+2025-09-15 11:37:57,526 | DEBUG | Random Seed: 1870455241
+2025-09-15 11:37:57,816 | DEBUG | Conformers generated: [[76], [], [], [], []] |Tautomers: 5 |Enantiomers: [1, 1, 1, 1, 1] |Disallowed: 4
+2025-09-15 11:37:58,147 | DEBUG | Conformers generated: [[76], [], [], [], []] |Tautomers: 5 |Enantiomers: [1, 1, 1, 1, 1] |Disallowed: 4
+2025-09-15 11:38:01,928 | DEBUG | Conformers generated: [[1000], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:38:05,836 | DEBUG | Conformers generated: [[1000], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:38:08,278 | DEBUG | Conformers generated: [[582], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:38:10,652 | DEBUG | Conformers generated: [[584], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:38:16,943 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/kirsty-1-2/kirsty-1-2_docking_script.sh with parameters:
+{'molid': 'kirsty-1-2', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/kirsty-1-2', 'sdf_filename': 'all_confs_kirsty-1-2_pH74.sdf', 'output_filename': 'kirsty-1-2_pose.sdf', 'log_filename': 'kirsty-1-2.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:38:16,943 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-2-2/jaffer-2-2_docking_script.sh with parameters:
+{'molid': 'jaffer-2-2', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-2-2', 'sdf_filename': 'all_confs_jaffer-2-2_pH74.sdf', 'output_filename': 'jaffer-2-2_pose.sdf', 'log_filename': 'jaffer-2-2.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:38:16,970 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/kirsty-1-1/kirsty-1-1_docking_script.sh with parameters:
+{'molid': 'kirsty-1-1', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/kirsty-1-1', 'sdf_filename': 'all_confs_kirsty-1-1_pH74.sdf', 'output_filename': 'kirsty-1-1_pose.sdf', 'log_filename': 'kirsty-1-1.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:38:16,970 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-1-1/jaffer-1-1_docking_script.sh with parameters:
+{'molid': 'jaffer-1-1', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-1-1', 'sdf_filename': 'all_confs_jaffer-1-1_pH74.sdf', 'output_filename': 'jaffer-1-1_pose.sdf', 'log_filename': 'jaffer-1-1.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:38:16,970 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-1-2/jaffer-1-2_docking_script.sh with parameters:
+{'molid': 'jaffer-1-2', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-1-2', 'sdf_filename': 'all_confs_jaffer-1-2_pH74.sdf', 'output_filename': 'jaffer-1-2_pose.sdf', 'log_filename': 'jaffer-1-2.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:38:16,971 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-2-1/jaffer-2-1_docking_script.sh with parameters:
+{'molid': 'jaffer-2-1', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-2-1', 'sdf_filename': 'all_confs_jaffer-2-1_pH74.sdf', 'output_filename': 'jaffer-2-1_pose.sdf', 'log_filename': 'jaffer-2-1.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:38:19,674 | DEBUG | Docking submitted. Job ID: 12583987
+2025-09-15 11:38:19,678 | DEBUG | Docking submitted. Job ID: 12583988
+2025-09-15 11:38:19,684 | DEBUG | Docking submitted. Job ID: 12583989
+2025-09-15 11:38:19,687 | DEBUG | Docking submitted. Job ID: 12583990
+2025-09-15 11:38:19,693 | DEBUG | Docking submitted. Job ID: 12583991
+2025-09-15 11:38:19,697 | DEBUG | Docking submitted. Job ID: 12583992
+2025-09-15 11:39:49,550 | INFO | Initialised logger: ChEMBL_docking
+2025-09-15 11:39:49,550 | DEBUG | Random Seed: 1870455241
+2025-09-15 11:39:49,551 | WARNING | /users/yhb18174/SimDMTA/docking/kirsty-1-1 exists
+2025-09-15 11:39:49,552 | WARNING | /users/yhb18174/SimDMTA/docking/kirsty-1-2 exists
+2025-09-15 11:39:49,553 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-1-1 exists
+2025-09-15 11:39:49,554 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-1-2 exists
+2025-09-15 11:39:49,555 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-2-1 exists
+2025-09-15 11:39:49,555 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-2-2 exists
+2025-09-15 11:39:49,824 | DEBUG | Conformers generated: [[76], [], [], [], []] |Tautomers: 5 |Enantiomers: [1, 1, 1, 1, 1] |Disallowed: 4
+2025-09-15 11:39:50,072 | DEBUG | Conformers generated: [[76], [], [], [], []] |Tautomers: 5 |Enantiomers: [1, 1, 1, 1, 1] |Disallowed: 4
+2025-09-15 11:39:53,730 | DEBUG | Conformers generated: [[1000], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:39:57,576 | DEBUG | Conformers generated: [[1000], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:39:59,975 | DEBUG | Conformers generated: [[582], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:40:02,382 | DEBUG | Conformers generated: [[584], []] |Tautomers: 2 |Enantiomers: [1, 2] |Disallowed: 1
+2025-09-15 11:40:16,094 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/kirsty-1-2/kirsty-1-2_docking_script.sh with parameters:
+{'molid': 'kirsty-1-2', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/kirsty-1-2', 'sdf_filename': 'all_confs_kirsty-1-2_pH74.sdf', 'output_filename': 'kirsty-1-2_pose.sdf', 'log_filename': 'kirsty-1-2.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:40:16,117 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/kirsty-1-1/kirsty-1-1_docking_script.sh with parameters:
+{'molid': 'kirsty-1-1', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/kirsty-1-1', 'sdf_filename': 'all_confs_kirsty-1-1_pH74.sdf', 'output_filename': 'kirsty-1-1_pose.sdf', 'log_filename': 'kirsty-1-1.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:40:16,117 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-2-1/jaffer-2-1_docking_script.sh with parameters:
+{'molid': 'jaffer-2-1', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-2-1', 'sdf_filename': 'all_confs_jaffer-2-1_pH74.sdf', 'output_filename': 'jaffer-2-1_pose.sdf', 'log_filename': 'jaffer-2-1.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:40:16,117 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-2-2/jaffer-2-2_docking_script.sh with parameters:
+{'molid': 'jaffer-2-2', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-2-2', 'sdf_filename': 'all_confs_jaffer-2-2_pH74.sdf', 'output_filename': 'jaffer-2-2_pose.sdf', 'log_filename': 'jaffer-2-2.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:40:16,117 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-1-1/jaffer-1-1_docking_script.sh with parameters:
+{'molid': 'jaffer-1-1', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-1-1', 'sdf_filename': 'all_confs_jaffer-1-1_pH74.sdf', 'output_filename': 'jaffer-1-1_pose.sdf', 'log_filename': 'jaffer-1-1.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:40:16,118 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-1-2/jaffer-1-2_docking_script.sh with parameters:
+{'molid': 'jaffer-1-2', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-1-2', 'sdf_filename': 'all_confs_jaffer-1-2_pH74.sdf', 'output_filename': 'jaffer-1-2_pose.sdf', 'log_filename': 'jaffer-1-2.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1870455241, 'cnn_scoring': 'rescore'}
+2025-09-15 11:40:18,743 | DEBUG | Docking submitted. Job ID: 12583993
+2025-09-15 11:40:18,747 | DEBUG | Docking submitted. Job ID: 12583994
+2025-09-15 11:40:18,750 | DEBUG | Docking submitted. Job ID: 12583995
+2025-09-15 11:40:18,754 | DEBUG | Docking submitted. Job ID: 12583996
+2025-09-15 11:40:18,757 | DEBUG | Docking submitted. Job ID: 12583997
+2025-09-15 11:40:18,768 | DEBUG | Docking submitted. Job ID: 12583998
+2025-09-15 12:01:04,625 | WARNING | Could not verify existing docking score for kirsty-1-1: invalid literal for int() with base 10: 'kirsty-1-1'
+2025-09-15 12:01:04,626 | ERROR | Failed to clear PD for kirsty-1-1: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,629 | DEBUG | Tables start on lines: [20, 34, 48, 62, 76, 90]
+2025-09-15 12:01:04,645 | INFO | Saving CSV...
+2025-09-15 12:01:04,685 | ERROR | Could not update docking CSV for kirsty-1-1: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,686 | WARNING | Could not verify existing docking score for kirsty-1-2: invalid literal for int() with base 10: 'kirsty-1-2'
+2025-09-15 12:01:04,686 | ERROR | Failed to clear PD for kirsty-1-2: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,689 | DEBUG | Tables start on lines: [20, 34, 48, 62, 76, 90]
+2025-09-15 12:01:04,699 | INFO | Saving CSV...
+2025-09-15 12:01:04,703 | ERROR | Could not update docking CSV for kirsty-1-2: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,703 | WARNING | Could not verify existing docking score for jaffer-1-1: invalid literal for int() with base 10: 'jaffer-1-1'
+2025-09-15 12:01:04,703 | ERROR | Failed to clear PD for jaffer-1-1: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,706 | DEBUG | Tables start on lines: [20, 34, 48, 62, 76]
+2025-09-15 12:01:04,715 | INFO | Saving CSV...
+2025-09-15 12:01:04,718 | ERROR | Could not update docking CSV for jaffer-1-1: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,719 | WARNING | Could not verify existing docking score for jaffer-1-2: invalid literal for int() with base 10: 'jaffer-1-2'
+2025-09-15 12:01:04,719 | ERROR | Failed to clear PD for jaffer-1-2: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,722 | DEBUG | Tables start on lines: [20, 34, 48, 62, 76]
+2025-09-15 12:01:04,731 | INFO | Saving CSV...
+2025-09-15 12:01:04,735 | ERROR | Could not update docking CSV for jaffer-1-2: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,735 | WARNING | Could not verify existing docking score for jaffer-2-1: invalid literal for int() with base 10: 'jaffer-2-1'
+2025-09-15 12:01:04,735 | ERROR | Failed to clear PD for jaffer-2-1: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,741 | DEBUG | Tables start on lines: [20, 34, 48, 62, 76]
+2025-09-15 12:01:04,750 | INFO | Saving CSV...
+2025-09-15 12:01:04,754 | ERROR | Could not update docking CSV for jaffer-2-1: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,754 | WARNING | Could not verify existing docking score for jaffer-2-2: invalid literal for int() with base 10: 'jaffer-2-2'
+2025-09-15 12:01:04,754 | ERROR | Failed to clear PD for jaffer-2-2: local variable 'docking_df' referenced before assignment
+2025-09-15 12:01:04,757 | DEBUG | Tables start on lines: [20, 34, 48, 62]
+2025-09-15 12:01:04,762 | INFO | Saving CSV...
+2025-09-15 12:01:04,765 | ERROR | Could not update docking CSV for jaffer-2-2: local variable 'docking_df' referenced before assignment
+2025-09-15 15:02:57,798 | INFO | Initialised logger: ChEMBL_docking
+2025-09-15 15:02:57,814 | DEBUG | Random Seed: 1090059427
+2025-09-15 15:02:59,816 | DEBUG | Conformers generated: [[76], [], [], [], []] |Tautomers: 5 |Enantiomers: [2, 2, 2, 2, 2] |Disallowed: 4
+2025-09-15 15:03:04,067 | DEBUG | Conformers generated: [[1000], []] |Tautomers: 2 |Enantiomers: [2, 4] |Disallowed: 1
+2025-09-15 15:03:06,824 | DEBUG | Conformers generated: [[582], []] |Tautomers: 2 |Enantiomers: [2, 4] |Disallowed: 1
+2025-09-15 15:03:12,269 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/kirsty-1/kirsty-1_docking_script.sh with parameters:
+{'molid': 'kirsty-1', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/kirsty-1', 'sdf_filename': 'all_confs_kirsty-1_pH74.sdf', 'output_filename': 'kirsty-1_pose.sdf', 'log_filename': 'kirsty-1.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1090059427, 'cnn_scoring': 'rescore'}
+2025-09-15 15:03:12,286 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-2/jaffer-2_docking_script.sh with parameters:
+{'molid': 'jaffer-2', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-2', 'sdf_filename': 'all_confs_jaffer-2_pH74.sdf', 'output_filename': 'jaffer-2_pose.sdf', 'log_filename': 'jaffer-2.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1090059427, 'cnn_scoring': 'rescore'}
+2025-09-15 15:03:12,286 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-1/jaffer-1_docking_script.sh with parameters:
+{'molid': 'jaffer-1', 'run_hrs': 0, 'run_mins': 20, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-1', 'sdf_filename': 'all_confs_jaffer-1_pH74.sdf', 'output_filename': 'jaffer-1_pose.sdf', 'log_filename': 'jaffer-1.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 1090059427, 'cnn_scoring': 'rescore'}
+2025-09-15 15:03:14,827 | DEBUG | Docking submitted. Job ID: 12584097
+2025-09-15 15:03:14,831 | DEBUG | Docking submitted. Job ID: 12584098
+2025-09-15 15:03:14,835 | DEBUG | Docking submitted. Job ID: 12584099
+2025-09-19 12:53:43,777 | INFO | Initialised logger: ChEMBL_docking
+2025-09-19 12:53:43,806 | DEBUG | Random Seed: 138869900
+2025-09-19 12:53:43,830 | WARNING | /users/yhb18174/SimDMTA/docking/kirsty-1 exists
+2025-09-19 12:53:43,831 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-1 exists
+2025-09-19 12:53:43,838 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-2 exists
+2025-09-19 12:53:45,431 | DEBUG | Conformers generated: [[76], [], [], [], []] |Tautomers: 5 |Enantiomers: [2, 2, 2, 2, 2] |Disallowed: 4
+2025-09-19 12:53:48,847 | DEBUG | Conformers generated: [[1000], []] |Tautomers: 2 |Enantiomers: [2, 4] |Disallowed: 1
+2025-09-19 12:53:51,149 | DEBUG | Conformers generated: [[582], []] |Tautomers: 2 |Enantiomers: [2, 4] |Disallowed: 1
+2025-09-19 12:53:53,116 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/kirsty-1/kirsty-1_docking_script.sh with parameters:
+{'molid': 'kirsty-1', 'run_hrs': 2, 'run_mins': 0, 'mol_dir': '/users/yhb18174/SimDMTA/docking/kirsty-1', 'sdf_filename': 'all_confs_kirsty-1_pH74.sdf', 'output_filename': 'kirsty-1_pose.sdf', 'log_filename': 'kirsty-1.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 138869900, 'cnn_scoring': 'rescore'}
+2025-09-19 12:53:53,131 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-1/jaffer-1_docking_script.sh with parameters:
+{'molid': 'jaffer-1', 'run_hrs': 2, 'run_mins': 0, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-1', 'sdf_filename': 'all_confs_jaffer-1_pH74.sdf', 'output_filename': 'jaffer-1_pose.sdf', 'log_filename': 'jaffer-1.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 138869900, 'cnn_scoring': 'rescore'}
+2025-09-19 12:53:53,142 | DEBUG | Created docking script at /users/yhb18174/SimDMTA/docking/jaffer-2/jaffer-2_docking_script.sh with parameters:
+{'molid': 'jaffer-2', 'run_hrs': 2, 'run_mins': 0, 'mol_dir': '/users/yhb18174/SimDMTA/docking/jaffer-2', 'sdf_filename': 'all_confs_jaffer-2_pH74.sdf', 'output_filename': 'jaffer-2_pose.sdf', 'log_filename': 'jaffer-2.log', 'receptor_path': '/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt', 'gnina_path': '/users/yhb18174/SimDMTA/scripts/docking/gnina', 'env_name': 'phd_env', 'autobox_ligand_pdb': None, 'num_cpu': 1, 'center_x': 14.66, 'center_y': 3.41, 'center_z': 10.47, 'size_x': 17.67, 'size_y': 17.0, 'size_z': 13.67, 'exhaustiveness': 8, 'num_modes': 9, 'addH': 0, 'stripH': 1, 'seed': 138869900, 'cnn_scoring': 'rescore'}
+2025-09-19 12:53:55,397 | DEBUG | Docking submitted. Job ID: 12590377
+2025-09-19 12:53:55,397 | DEBUG | Docking submitted. Job ID: 12590378
+2025-09-19 12:53:55,441 | DEBUG | Docking submitted. Job ID: 12590379
+2025-09-23 10:47:17,595 | INFO | Initialised logger: ChEMBL_docking
+2025-09-23 10:47:17,606 | DEBUG | Random Seed: 1268900071
+2025-09-23 10:47:17,606 | WARNING | /users/yhb18174/SimDMTA/docking/kirsty-1 exists
+2025-09-23 10:47:17,606 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-1 exists
+2025-09-23 10:47:17,606 | WARNING | /users/yhb18174/SimDMTA/docking/jaffer-2 exists
+2025-09-23 10:47:19,152 | DEBUG | Conformers generated: [[76], [], [], [], []] |Tautomers: 5 |Enantiomers: [2, 2, 2, 2, 2] |Disallowed: 4
+2025-09-23 10:47:22,358 | DEBUG | Conformers generated: [[1000], []] |Tautomers: 2 |Enantiomers: [2, 4] |Disallowed: 1
+2025-09-23 10:47:24,396 | DEBUG | Conformers generated: [[582], []] |Tautomers: 2 |Enantiomers: [2, 4] |Disallowed: 1
+2025-09-23 10:47:32,215 | WARNING | Could not verify existing docking score for kirsty-1: invalid literal for int() with base 10: 'kirsty-1'
+2025-09-23 10:47:32,215 | ERROR | Failed to clear PD for kirsty-1: local variable 'docking_df' referenced before assignment
+2025-09-23 10:47:32,217 | DEBUG | Tables start on lines: [20, 34, 48, 62, 76, 90, 104, 118, 132, 146, 160, 174, 188, 202, 216, 230, 244, 258, 272, 286, 300, 314, 328, 342, 356, 370, 384, 398, 412, 426, 440, 454]
+2025-09-23 10:47:32,273 | INFO | Saving CSV...
+2025-09-23 10:47:32,291 | ERROR | Could not update docking CSV for kirsty-1: local variable 'docking_df' referenced before assignment
+2025-09-23 10:47:32,314 | WARNING | Could not verify existing docking score for jaffer-1: invalid literal for int() with base 10: 'jaffer-1'
+2025-09-23 10:47:32,314 | ERROR | Failed to clear PD for jaffer-1: local variable 'docking_df' referenced before assignment
+2025-09-23 10:47:32,329 | DEBUG | Tables start on lines: [20, 34, 48, 62, 76, 90, 104, 118, 132, 146, 160, 174, 188, 202, 216, 230, 244, 258, 272, 286, 300, 314, 328, 342, 356, 370, 384]
+2025-09-23 10:47:32,368 | INFO | Saving CSV...
+2025-09-23 10:47:32,372 | ERROR | Could not update docking CSV for jaffer-1: local variable 'docking_df' referenced before assignment
+2025-09-23 10:47:32,394 | WARNING | Could not verify existing docking score for jaffer-2: invalid literal for int() with base 10: 'jaffer-2'
+2025-09-23 10:47:32,394 | ERROR | Failed to clear PD for jaffer-2: local variable 'docking_df' referenced before assignment
+2025-09-23 10:47:32,411 | DEBUG | Tables start on lines: [20, 34, 48, 62, 76, 90, 104, 118, 132, 146, 160, 174, 188, 202, 216, 230, 244, 258, 272, 286, 300, 314, 328, 342, 356, 370, 384]
+2025-09-23 10:47:32,450 | INFO | Saving CSV...
+2025-09-23 10:47:32,453 | ERROR | Could not update docking CSV for jaffer-2: local variable 'docking_df' referenced before assignment

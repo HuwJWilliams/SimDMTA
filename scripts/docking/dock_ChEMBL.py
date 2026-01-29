@@ -1,9 +1,10 @@
+# %%
 import pandas as pd
 import sys
 from pathlib import Path
 
 FILE_DIR = Path(__file__).resolve().parent
-PROJ_DIR = FILE_DIR.parents[2]
+PROJ_DIR = FILE_DIR.parents[1]
 SCRIPTS_DIR = PROJ_DIR / 'scripts'
 RESULTS_DIR = PROJ_DIR / 'results'
 DATASET_DIR = PROJ_DIR / "datasets"
@@ -18,32 +19,39 @@ config_json = readConfigJSON(config_fpath=PROJ_DIR / 'config.json')
 data_paths = config_json['data']
 receptor_path = config_json["receptor"]
 
-train_df = pd.read_csv(
-    data_paths['it0_training_dock'],
-    index_col=False,
-)
+# train_df = pd.read_csv(
+#     data_paths['it0_training_dock'],
+#     index_col=False,
+# )
 
 hold_out_df = pd.read_csv(
-    data_paths['held_out_dock'],
+#    data_paths['held_out_dock'],
+    "/users/yhb18174/Prosperity_Partnership/docking/jaffer_kirsty_docking.csv",
     index_col=False,
 )
 
+hold_out_df['SMILES']
+
 docking_dir = PROJ_DIR / "docking"
-smi_ls = list(train_df["SMILES"])
-molid_ls = list(train_df["ID"])
+smi_ls = list(hold_out_df["SMILES"])
+molid_ls = list(hold_out_df["ID"])
 
 mp = RunGNINA(
     docking_dir=docking_dir,
     molid_ls=molid_ls,
     smi_ls=smi_ls,
     receptor_path=receptor_path,
+    log_path="ChEMBL_docking"
 )
 
-mp.ProcessMols(use_multiprocessing=True)
+sdfs = mp.processMols(use_multiprocessing=False)
 
-ids, cnn_scores, aff_scores = mp.SubmitJobs(run_hrs=0, run_mins=20)
+# %%
 
-ids, cnn_scores, aff_scores = mp.MakeCsv(save_data=True)
+job_ids = mp.submitMultipleJobs(run_hrs=2, run_mins=0)
+
+# %%
+ids, cnn_scores, aff_scores = mp.makeDockingCSV(save_data=True)
 
 new_df = pd.DataFrame()
 new_df["ID"] = molid_ls
@@ -52,6 +60,8 @@ new_df["CNN_affinity"] = cnn_scores
 new_df["Affinity(kcal/mol)"] = aff_scores
 
 new_df.to_csv(
-    f"test_data_paths['it0_training_dock']",
+    PROJ_DIR / "docking" / "docking.csv",
     index="ID",
 )
+
+# %%

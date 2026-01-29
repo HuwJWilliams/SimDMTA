@@ -11,5 +11,5 @@
         "held_out_full": "/path/to/hold/out/full/information/file.csv",
         "held_out_dock": "/path/to/hold/out/docking/file.csv"
     },
-    "receptor": "/path/to/docking/receptor/file.pdb"
+    "receptor": "/users/yhb18174/SimDMTA/scripts/docking/receptors/4bw1_5_conserved_HOH.pdbqt"
 }

@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from glob import glob
+import sys, os
 import re
 import fcntl
 import time
@@ -12,6 +13,9 @@ import shutil
 from PIL import Image, ImageFilter
 import imageio
 import logging
+from rdkit.Chem import RDConfig
+sys.path.append(os.path.join(RDConfig.RDContribDir, 'SA_Score'))
+import sascorer
 
 FILE_DIR = Path(__file__).resolve().parent
 PROJ_DIR = FILE_DIR.parents[1]
@@ -588,3 +592,19 @@ def readConfigJSON(config_fpath: str):
         data = json.load(f)
 
     return data
+
+def saScore(
+    df: pd.DataFrame,
+    smi_col: str="SMILES"
+)-> pd.DataFrame:
+    """
+    Function to calculate the SA score of SMILES in a DF
+    """
+
+    df_copy = df.copy()
+    df_copy["Mol"] = df_copy[smi_col].apply(Chem.MolFromSMiles)
+    df_copy["SA_Score"] = df_copy["Mol"].apply(
+        lambda mol: sascorer.calculateScore(mol) if mol is not None else None
+    )
+
+    return df_copy

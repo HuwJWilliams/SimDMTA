@@ -24,14 +24,11 @@ from scipy.spatial import ConvexHull
 import random as rand
 import time
 import logging
-import os
-from collections import defaultdict
 from scipy.stats import gaussian_kde
 from matplotlib.patches import Patch
 from rdkit.DataStructs import FingerprintSimilarity
 from rdkit import Chem
 from rdkit.Chem import Draw, rdFingerprintGenerator, BRICS
-from rdkit.Chem.Scaffolds import MurckoScaffold
 import colorcet as cc
 import json
 

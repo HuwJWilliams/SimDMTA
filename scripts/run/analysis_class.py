@@ -1421,7 +1421,12 @@ class Analysis:
         molids_a: list,
         molids_b: list,
         save_plots: bool = False,
-        plot_fname: str="tanimoto_heatmap"
+        plot_fname: str="tanimoto_heatmap",
+        save_raw_data: bool=False,
+        plot_aa: bool=True,
+        plot_bb: bool=True,
+        plot_ab: bool=True,
+
     ):
         """
         Description
@@ -1463,42 +1468,50 @@ class Analysis:
 
         sim_ab = self._pairwiseSimilarity(fngpts_x=fngpts_a, fngpts_y=fngpts_b)
 
-        def heatmap(sim, x_labels, y_labels, ax):
-            plot = sns.heatmap(
+        def heatmap(sim, x_labels, y_labels, title, fname=None):
+            plt.figure(figsize=(10, 10))
+
+            ax = sns.heatmap(
                 sim,
-                annot=True,
-                annot_kws={"fontsize": 10},
                 cmap="crest",
                 xticklabels=x_labels,
                 yticklabels=y_labels,
-                ax=ax,
-                cbar=False,
+                cbar=True,
             )
 
-        fig, axes = plt.subplots(1, 3, figsize=(30, 10))
+            ax.set_title(title)
+            ax.collections[0].colorbar.set_label("Tanimoto Similarity")
 
-        heatmap(sim=sim_a, x_labels=molids_a, y_labels=molids_a, ax=axes[0])
-        axes[0].set_title("Heatmap Smiles A")
+            plt.tight_layout()
 
-        heatmap(sim=sim_b, x_labels=molids_b, y_labels=molids_b, ax=axes[1])
-        axes[1].set_title("Heatmap Smiles B")
+            if fname is not None:
+                plt.savefig(fname, dpi=600)
 
-        heatmap(sim=sim_ab, x_labels=molids_a, y_labels=molids_b, ax=axes[2])
-        axes[2].set_title("Heatmap Smiles A vs Smiles B")
+            plt.show()
 
-        cbar = fig.colorbar(
-            axes[0].collections[0],
-            ax=axes,
-            orientation="vertical",
-            fraction=0.02,
-            pad=0.04,
-        )
-        cbar.set_label("Tanimoto Similarity")
 
-        if save_plots:
-            plt.savefig(self.plot_dir / f"{plot_fname}.png", dpi=(600))
+        if plot_aa:
+            fname = self.plot_dir / "sim_A.png" if save_plots else None
+            heatmap(sim_a, molids_a, molids_a, "Heatmap Smiles A", fname)
 
-        plt.show()
+
+        if plot_bb:
+            fname = self.plot_dir / "sim_B.png" if save_plots else None
+            heatmap(sim_b, molids_b, molids_b, "Heatmap Smiles B", fname)
+
+
+        if plot_ab:
+            fname = self.plot_dir / "sim_AB.png" if save_plots else None
+            heatmap(sim_ab, molids_a, molids_b, "Heatmap Smiles A vs Smiles B", fname)
+
+        if save_raw_data:
+            df_a = pd.DataFrame(sim_a, index=molids_a, columns=molids_a)
+            df_b = pd.DataFrame(sim_b, index=molids_b, columns=molids_b)
+            df_ab = pd.DataFrame(sim_ab, index=molids_a, columns=molids_b)
+
+            df_a.to_csv(self.plot_dir / f"{plot_fname}_A_vs_A.csv")
+            df_b.to_csv(self.plot_dir / f"{plot_fname}_B_vs_B.csv")
+            df_ab.to_csv(self.plot_dir / f"{plot_fname}_A_vs_B.csv")
 
     def avgTanimotoAcrossIterations(
         self,
